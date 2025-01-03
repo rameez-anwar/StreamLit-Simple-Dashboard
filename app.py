@@ -2,7 +2,7 @@ import streamlit as st
 import pandas as pd
 import joblib
 
-st.header("Diabetes Prediction")
+st.header("DIABETES PREDICTION")
 model = joblib.load('model.pkl')
 
 # Input Features
@@ -31,4 +31,4 @@ if st.button("Predict"):
     prediction = model.predict(input_data)[0]
     result = "Diabetic" if prediction == 1 else "Non-Diabetic"
     st.subheader("Prediction Result")
-    st.write(f"The model predicts that the person is: {result}")
+    st.write(f"Prediction: {result}")
